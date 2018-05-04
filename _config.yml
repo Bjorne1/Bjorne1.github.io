@@ -1,7 +1,7 @@
 # Site settings
 title: WCS Blog
-SEOTitle: 温长生的博客 | WCS Blog
-header-img: img/post-bg-desk.jpg
+SEOTitle: WCS Blog
+header-img: img/post-bg-os-metro.jpg
 email: wcs2010@foxmail.com
 description: "Every failure is leading towards success."
 keyword: "WCS, WCS Blog, 温长生的博客, wenchangsheng, 温长生,java"
@@ -12,17 +12,17 @@ github_repo: "https://github.com/Bjorne1/Bjorne1.github.io.git" # you code repos
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: /img/avatar_m.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/avatar-wcs.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
 # SNS settings
 RSS: false
 # weibo_username:     qiubaiying
-zhihu_username:     qiubaiying
+#zhihu_username:     qiubaiying
 github_username:    Bjorne1
-facebook_username:  Bjorne1
-#twitter_username:   qiubaiying
+#facebook_username:  Bjorne1
+twitter_username:   Blutous1
 
 
 
@@ -56,11 +56,11 @@ kramdown:
 
 # 评论系统
 # Disqus（https://disqus.com/）
-# disqus_username: qiubaiying
+# disqus_username: Bjorne1
 
 # Gitalk
 gitalk:
-  enable: true    #是否开启Gitalk评论
+  enable: false    #是否开启Gitalk评论
   clientID: f2c84e7629bb1446c1a4                            #生成的clientID
   clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
   repo: Bjorne1.github.io    #仓库名称
@@ -73,10 +73,10 @@ gitalk:
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: b50bf2b12b5338a1845e33832976fd68
+# ba_track_id: b50bf2b12b5338a1845e33832976fd68
 
 # Google Analytics
-ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
+ga_track_id: 'UA-118603534-1'            # Format: UA-xxxxxx-xx
 ga_domain: wenchangsheng.top               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
@@ -104,7 +104,7 @@ friends: [
         title: "CodeKata",
         href: "http://codekata.com"
     },{
-        title: "Apple",
-        href: "https://apple.com"
+        title: "Navigation",
+        href: "http://code.giffox.com/"
     }
 ]
