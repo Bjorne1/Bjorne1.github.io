@@ -56,7 +56,7 @@ kramdown:
 
 # 评论系统
 # Disqus（https://disqus.com/）
-# disqus_username: Bjorne1
+ disqus_username: Bjorne1
 
 # Gitalk
 gitalk:
