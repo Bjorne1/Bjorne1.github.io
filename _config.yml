@@ -55,12 +55,12 @@ kramdown:
 
 
 # 评论系统
-# Disqus（https://disqus.com/）
-# disqus_username: Bjorne1
+Disqus（https://disqus.com/）
+disqus_username: Bjorne1
 
 # Gitalk
 gitalk:
-  enable: true    #是否开启Gitalk评论
+  enable: false    #是否开启Gitalk评论
   clientID: a979b0b1b695068406c6                            #生成的clientID
   clientSecret: 39fe29204febcc6af8f94602439bdf8ababa3ff1    #生成的clientSecret
   repo: Bjorne1.github.io    #仓库名称
