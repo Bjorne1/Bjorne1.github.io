@@ -1,4 +1,4 @@
-# BY Blog
+# WCS Blog
 
 ## Welcome to my blog!
 
