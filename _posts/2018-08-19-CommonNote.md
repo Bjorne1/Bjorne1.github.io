@@ -29,7 +29,6 @@ tags:
 这个权重可以用在前端取数据的时候，数据根据这个个权重来显示在页面的顺序.
 ## 7.restful风格有上传文件时的PUT/DELETE请求
 有上传文件，multipartResolver是配在springmvc.xml中，文件上传，PUT请求时，由于过滤器hiddenHttpMethodFilter不能过滤表单为enctype ="multipart/form-data，所以无法将表单中<code><input="hidden" name="_method" value="PUT"></code> 解析PUT请求。所以在过滤器hiddenHttpMethodFilter之前就需要进行有文件上传的FORM表单进行解析。
-<code>
   <filter>
 	<filter-name>MultipartFilter</filter-name>
 	<filter-class>org.springframework.web.multipart.support.MultipartFilter</filter-class>
@@ -42,7 +41,6 @@ tags:
 		<filter-name>MultipartFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-</code>
 但是，通过跟踪源码，spring中获取上下文为null,beanName=multipartResolver能取到，解决方法为将原来放springmvc.xml的文件上传配置放到，spring.xml配置中，其获取的上下文才不为null，才能够正常拦截。
 <code>		
     <!-- 配置spring资源 -->
