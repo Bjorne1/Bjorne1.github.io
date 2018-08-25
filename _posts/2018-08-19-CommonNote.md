@@ -20,7 +20,7 @@ tags:
 ## 2.根据数据库字段创建实体类
 
 这种方法感觉用idea自动创建更为方便。在这只是贴上如何在数据库查询某表的字段。  
-`SELECT COLUMN_name FROM information_schema.COLUMNS WHERE table_schema='comment' AND table_name='ad'`
+`SELECT COLUMN_name FROM information_schema.COLUMNS WHERE table_schema='comment' AND table_name='ad'`  
 通过以上代码即可查询到数据库comment中ad表中的字段，以前从来不知道数据库还可以这样查，于是便记下来。
 
 ## 3.dao层查询
@@ -47,16 +47,16 @@ tags:
 
 ```filter
 <filter>
-<filter-name>MultipartFilter</filter-name>
-<filter-class>org.springframework.web.multipart.support.MultipartFilter</filter-class>
-<init-param>
-<param-name>multipartResolverBeanName</param-name>
-<param-value>multipartResolver</param-value>
-</init-param>
+    <filter-name>MultipartFilter</filter-name>
+        <filter-class>org.springframework.web.multipart.support.MultipartFilter</filter-class>
+    <init-param>
+    <param-name>multipartResolverBeanName</param-name>
+    <param-value>multipartResolver</param-value>
+    </init-param>
 </filter>
 <filter-mapping>
-<filter-name>MultipartFilter</filter-name>
-<url-pattern>/*</url-pattern>
+    <filter-name>MultipartFilter</filter-name>
+    <url-pattern>/*</url-pattern>
 </filter-mapping>
 ```
 
@@ -64,10 +64,10 @@ tags:
 
 ```filter
 <context-param>
-<!-- 配置spring资源 -->
-<param-name>contextConfigLocation</param-name>
-<!-- 配置文件文件路径 -->
-<param-value>classpath:spring-*.xml</param-value>
+    <!-- 配置spring资源 -->
+    <param-name>contextConfigLocation</param-name>
+    <!-- 配置文件文件路径 -->
+    <param-value>classpath:spring-*.xml</param-value>
 </context-param>
 ```
 
