@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      慕课网课程之大众点评笔记
-subtitle:   Learning from common
+title:      慕课网之大众点评笔记
+subtitle:   大众点评学习笔记
 date:       2018-08-19
 author:     WCS
 header-img: img/post-bg-swift2.jpg
@@ -9,7 +9,7 @@ catalog: true
 tags:
     - Notes
 ---
-# 这是一篇从慕课网学习大众点评开发的笔记
+# 这是一篇大众点评开发的笔记
 
 > 课程的链接为[IT段子手详解MyBatis遇到Spring 秒学Java SSM开发大众点评](https://coding.imooc.com/class/105.html)
 
