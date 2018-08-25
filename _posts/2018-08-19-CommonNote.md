@@ -30,7 +30,7 @@ tags:
 
 ## 4.service层
 
-`public boolean add(){}`
+`public boolean add(){}`  
 返回值为boolean可以用来判断是否新增成功。
 
 ## 5.文件上传
@@ -43,7 +43,7 @@ tags:
 
 ## 7.restful风格有上传文件时的PUT/DELETE请求
 
-有上传文件，multipartResolver是配在springmvc.xml中，文件上传，PUT请求时，由于过滤器hiddenHttpMethodFilter不能过滤表单为enctype ="multipart/form-data，所以无法将表单中`<input="hidden" name="_method" value="PUT">`解析PUT请求。所以在过滤器hiddenHttpMethodFilter之前就需要进行有文件上传的FORM表单进行解析。
+有上传文件，multipartResolver是配在springmvc.xml中，文件上传，PUT请求时，由于过滤器hiddenHttpMethodFilter不能过滤表单为enctype ="multipart/form-data，所以无法将表单中`<input="hidden" name="_method" value="PUT">`  解析PUT请求。所以在过滤器hiddenHttpMethodFilter之前就需要进行有文件上传的FORM表单进行解析。
 
 ```filter
 <filter>
@@ -73,7 +73,7 @@ tags:
 
 ## 8.mybatis中引用静态常量的方法
 
-`d_city.type='${@org.imooc.constant.DicTypeConst@CITY}'`//CITY是常量字段,(方法也行)。  
+`d_city.type='${@org.imooc.constant.DicTypeConst@CITY}'//CITY是常量字段,(方法也行)。`  
 为什么要这样引用呢？当然是为了让程序高度的解耦。
 
 ## 9.BeanUtils的用法
