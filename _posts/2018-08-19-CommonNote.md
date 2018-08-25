@@ -44,11 +44,25 @@ tags:
 ## 7.restful风格有上传文件时的PUT/DELETE请求
 
 有上传文件，multipartResolver是配在springmvc.xml中，文件上传，PUT请求时，由于过滤器hiddenHttpMethodFilter不能过滤表单为enctype ="multipart/form-data，所以无法将表单中`<input="hidden" name="_method" value="PUT">`解析PUT请求。所以在过滤器hiddenHttpMethodFilter之前就需要进行有文件上传的FORM表单进行解析。
-
-`<filter><filter-name>MultipartFilter</filter-name><filter-class>org.springframework.web.multipart.supportMultipartFilter</filter-class><init-param><param-name>multipartResolverBeanName</param-name><param-value>multipartResolver</param-value></init-param></filter><filter-mapping><filter-name>MultipartFilter</filter-name><url-pattern>/*</url-pattern></filter-mapping>`
-
+`<filter>`
+`<filter-name>MultipartFilter</filter-name>`
+`<filter-class>org.springframework.web.multipart.support.MultipartFilter</filter-class>`
+`<init-param>`
+`<param-name>multipartResolverBeanName</param-name>`
+`<param-value>multipartResolver</param-value>`
+`</init-param>`
+`</filter>`
+`<filter-mapping>`
+`<filter-name>MultipartFilter</filter-name>`
+`<url-pattern>/*</url-pattern>`
+`</filter-mapping>`
 但是，通过跟踪源码，spring中获取上下文为null,beanName=multipartResolver能取到，解决方法为将原来放springmvc.xml的文件上传配置放到，spring.xml配置中，其获取的上下文才不为null，才能够正常拦截。
-`<context-param><!-- 配置spring资源 --><param-name>contextConfigLocation</param-name><!-- 配置文件文件路径 --><param-value>classpath:spring-*.xml</param-value></context-param>`
+`<context-param>`
+`<!-- 配置spring资源 -->`
+`<param-name>contextConfigLocation</param-name>`
+`<!-- 配置文件文件路径 -->`
+`<param-value>classpath:spring-*.xml</param-value>`
+`</context-param>`
 
 ## 8.mybatis中引用静态常量的方法
 
