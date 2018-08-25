@@ -19,18 +19,18 @@ tags:
 
 ## 2.根据数据库字段创建实体类
 
-这种方法感觉用idea自动创建更为方便。在这只是贴上如何在数据库查询某表的字段。
+这种方法感觉用idea自动创建更为方便。在这只是贴上如何在数据库查询某表的字段。  
 `SELECT COLUMN_name FROM information_schema.COLUMNS WHERE table_schema='comment' AND table_name='ad'`
 通过以上代码即可查询到数据库comment中ad表中的字段，以前从来不知道数据库还可以这样查，于是便记下来。
 
 ## 3.dao层查询
 
-`int add();`
+`int add();`  
 返回int是为了查看影响的条数，后面有可能用得到。
 
 ## 4.service层
 
-<code>public boolean add(){}</code>
+`public boolean add(){}`
 返回值为boolean可以用来判断是否新增成功。
 
 ## 5.文件上传
@@ -44,36 +44,43 @@ tags:
 ## 7.restful风格有上传文件时的PUT/DELETE请求
 
 有上传文件，multipartResolver是配在springmvc.xml中，文件上传，PUT请求时，由于过滤器hiddenHttpMethodFilter不能过滤表单为enctype ="multipart/form-data，所以无法将表单中`<input="hidden" name="_method" value="PUT">`解析PUT请求。所以在过滤器hiddenHttpMethodFilter之前就需要进行有文件上传的FORM表单进行解析。
-`<filter>`
-`<filter-name>MultipartFilter</filter-name>`
-`<filter-class>org.springframework.web.multipart.support.MultipartFilter</filter-class>`
-`<init-param>`
-`<param-name>multipartResolverBeanName</param-name>`
-`<param-value>multipartResolver</param-value>`
-`</init-param>`
-`</filter>`
-`<filter-mapping>`
-`<filter-name>MultipartFilter</filter-name>`
-`<url-pattern>/*</url-pattern>`
-`</filter-mapping>`
+
+```filter
+<filter>
+<filter-name>MultipartFilter</filter-name>
+<filter-class>org.springframework.web.multipart.support.MultipartFilter</filter-class>
+<init-param>
+<param-name>multipartResolverBeanName</param-name>
+<param-value>multipartResolver</param-value>
+</init-param>
+</filter>
+<filter-mapping>
+<filter-name>MultipartFilter</filter-name>
+<url-pattern>/*</url-pattern>
+</filter-mapping>
+```
+
 但是，通过跟踪源码，spring中获取上下文为null,beanName=multipartResolver能取到，解决方法为将原来放springmvc.xml的文件上传配置放到，spring.xml配置中，其获取的上下文才不为null，才能够正常拦截。
-`<context-param>`
-`<!-- 配置spring资源 -->`
-`<param-name>contextConfigLocation</param-name>`
-`<!-- 配置文件文件路径 -->`
-`<param-value>classpath:spring-*.xml</param-value>`
-`</context-param>`
+
+```filter
+<context-param>
+<!-- 配置spring资源 -->
+<param-name>contextConfigLocation</param-name>
+<!-- 配置文件文件路径 -->
+<param-value>classpath:spring-*.xml</param-value>
+</context-param>
+```
 
 ## 8.mybatis中引用静态常量的方法
 
-`d_city.type='${@org.imooc.constant.DicTypeConst@CITY}'`//CITY是常量字段,(方法也行)。
+`d_city.type='${@org.imooc.constant.DicTypeConst@CITY}'`//CITY是常量字段,(方法也行)。  
 为什么要这样引用呢？当然是为了让程序高度的解耦。
 
 ## 9.BeanUtils的用法
 
-`BeanUtils.copyProperties(teacher,teacherForm)`
-可以省去大量的get/set：
-`<code>teacher.setName(teacherForm.getName());`
+`BeanUtils.copyProperties(teacher,teacherForm)`  
+可以省去大量的get/set：  
+`teacher.setName(teacherForm.getName());`
 
 ## 10.表单验证
 
