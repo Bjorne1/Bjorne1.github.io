@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      GitCommand
+title:      Git Command
 subtitle:   Git当中常用的一些快捷键
 date:       2018-09-23
 author:     WCS
