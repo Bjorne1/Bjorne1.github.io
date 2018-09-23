@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      Git Command
-subtitle:   Git当中常用的一些快捷键
+title:      Git Commands
+subtitle:   Commands used frequently in git
 date:       2018-09-23
 author:     WCS
 header-img: img/cameron-vaughan-1068039-unsplash.jpg

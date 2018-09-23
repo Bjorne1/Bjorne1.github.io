@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      idea之常用快捷键
-subtitle:   idea常用的一些快捷键
+title:      idea——shortcut key
+subtitle:   shortcut key used frequently in idea
 date:       2018-08-25
 author:     WCS
 header-img: img/post-bg-swift.jpg
