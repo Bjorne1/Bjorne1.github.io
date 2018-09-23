@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      慕课网之大众点评笔记
+title:      MOOC:Comment Notes
 subtitle:   大众点评学习笔记
 date:       2018-08-19
 author:     WCS
