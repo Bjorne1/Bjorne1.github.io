@@ -98,7 +98,7 @@ Git与Github是通过SSH加密的所以需要一些设置如下：
 
 3：在git中，先`pull`再`push`，github仓库就与本地仓库同步了。  
 
-## 5.版本回退
+## 6.版本回退
 
 **第一步**：先在git-show history找到你要回退版本的版本号oldVersion以及当前版本号newVersion。  
 
