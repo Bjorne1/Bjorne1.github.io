@@ -7,7 +7,7 @@ author:     WCS
 header-img: img/cameron-vaughan-1068039-unsplash.jpg
 catalog: true
 tags:
-    - Notes
+    - Git
 ---
 
 ## 1.常见命令
