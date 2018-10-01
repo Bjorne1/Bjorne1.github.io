@@ -18,10 +18,10 @@ sidebar-avatar: /img/avatar-wcs.jpg       # use absolute URL, seeing it's used i
 
 # SNS settings
 RSS: false
-# weibo_username:     qiubaiying
+weibo_username:     wcsmile2012
 # zhihu_username:     qiubaiying
 github_username:    Bjorne1
-facebook_username:  Wen Changsheng
+# facebook_username:  Wen Changsheng
 twitter_username:   Blutous1
 
 
