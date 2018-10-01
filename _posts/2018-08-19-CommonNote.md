@@ -9,7 +9,6 @@ catalog: true
 tags:
     - Notes
 ---
-# 这是一篇大众点评开发的笔记
 
 > 课程的链接为[IT段子手详解MyBatis遇到Spring 秒学Java SSM开发大众点评](https://coding.imooc.com/class/105.html)
 

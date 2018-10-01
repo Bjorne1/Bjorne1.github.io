@@ -9,7 +9,6 @@ catalog: true
 tags:
     - Notes
 ---
-# 个人idea常用的一些快捷键
 
 ## 1.高效定位
 

@@ -10,8 +10,6 @@ tags:
     - Notes
 ---
 
-# 个人VSCode和idea常用的一些插件
-
 ## 一、VSCode
 
 ### 1.Settings Sync 
