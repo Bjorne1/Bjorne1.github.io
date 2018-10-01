@@ -10,7 +10,7 @@ tags:
     - Notes
 ---
 
-## VSCode
+## 一、VS Code
 
 ### 1.Settings Sync 
 
@@ -60,7 +60,7 @@ javascript and typescript.
 
 default browser or application.  
 
-## Idea
+## 二、IDEA
 
 ### 1.idea自身可以导入导出配置，方便不同电脑的同步
 
@@ -78,7 +78,7 @@ directly from IntelliJ.
 
 `Maven Helper` A must have plugin for working with Maven.  
 
-## 结语
+## 三、结语
 
 因为本篇文章的英语都是些很简单的单词，就直接用英文写没有翻译。虽然是简单  
 
