@@ -4,7 +4,7 @@ title:      FileUpload-FormData
 subtitle:   My Personal Plug-in Components 
 date:       2018-10-01
 author:     WCS
-header-img: img/mat-reding-1079446-unsplash.jpg
+header-img: img/diana-spatariu-1079409-unsplash.jpg
 catalog: true
 tags:
     - JAVA
@@ -88,6 +88,7 @@ c.以上为对`nginx`只存在知道为反向代理服务器的认知上，作�
 于是百度发现，别人也有这种情况，但是是在监听器中取不到，他们给出的最简单的方法是把参数放在  `url`后面，这样确实能够获取到，但是却违反了`RESTFUL`协议啊。  
 
 另一种方法则是:  
+
 a.首先在`spring`配置文件中配置`MultipartHttpServletRequest`  
 
 ```
