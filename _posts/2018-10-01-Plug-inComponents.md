@@ -10,7 +10,7 @@ tags:
     - Notes
 ---
 
-#个人VSCode和idea常用的一些插件
+# 个人VSCode和idea常用的一些插件
 
 ## 一、VSCode插件
 
