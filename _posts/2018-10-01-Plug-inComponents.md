@@ -12,7 +12,7 @@ tags:
 
 ## VSCode
 
-### Settings Sync 
+### 1.Settings Sync 
 
 这个插件是VSCode最重要的插件！可以在不同的电脑上同步你的VSCode插件！  
 
@@ -24,7 +24,7 @@ tags:
 
 `alt+shift+u` 上传配置
 
-### 其他常用的插件
+### 2.其他常用的插件
 
 `ESLint` Code Checking.  
 
@@ -62,9 +62,9 @@ default browser or application.
 
 ## Idea
 
-### idea自身可以导入导出配置，方便不同电脑的同步
+### 1.idea自身可以导入导出配置，方便不同电脑的同步
 
-### 常用插件
+### 2.常用插件
 
 `Eclipse Code Formatter` Allows using Eclipse's code formatter  
 
