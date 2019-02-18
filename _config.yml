@@ -77,7 +77,7 @@ ba_track_id: b35540efbc4e377c7e6a9756a7bfb28b
 
 # Google Analytics
 ga_track_id: 'UA-118603534-1'            # Format: UA-xxxxxx-xx
-ga_domain: wenchangsheng.top               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+ga_domain: wenchangsheng.com               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
 
@@ -99,7 +99,7 @@ service-worker: true
 friends: [
     {
         title: "MyBlog",
-        href: "http://wenchangsheng.top"
+        href: "http://wenchangsheng.com"
     },{
         title: "CodeKata",
         href: "http://codekata.com"
