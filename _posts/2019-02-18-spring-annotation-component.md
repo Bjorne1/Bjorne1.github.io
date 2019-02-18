@@ -14,6 +14,7 @@ tags:
 # Spring注解之组件注册  
 
 ## 一、传统的XML注册bean
+  
 
 ```
     <!--扫描com.annotation下的组件-->
@@ -25,6 +26,7 @@ tags:
 ```  
 
 ## 二、Spring注解之Configuration
+  
 
 ```
 /**
@@ -44,6 +46,7 @@ public class MainConfig {
 ```  
 
 ## 三、Spring注解之ComponentScans
+  
 
 ```
 @Configuration
