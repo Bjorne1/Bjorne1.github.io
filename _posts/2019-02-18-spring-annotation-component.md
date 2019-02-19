@@ -4,7 +4,7 @@ title:      Spring Annotation(一)
 subtitle:   Srping Component Registry
 date:       2019-02-18
 author:     WCS
-header-img: img/spring-annotation01.jpg
+header-img: img/2019-02-18-spring-annotation-component.jpg
 catalog: true
 tags:
     - Spring

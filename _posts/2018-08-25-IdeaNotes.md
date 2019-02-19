@@ -4,7 +4,7 @@ title:      idea——shortcut key
 subtitle:   shortcut key used frequently in idea
 date:       2018-08-25
 author:     WCS
-header-img: img/post-bg-swift.jpg
+header-img: img/2018-08-25-IdeaNotes.jpg
 catalog: true
 tags:
     - Notes

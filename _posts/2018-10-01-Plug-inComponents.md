@@ -4,7 +4,7 @@ title:      Plug-in Components VSCode and Idea
 subtitle:   My Personal Plug-in Components 
 date:       2018-10-01
 author:     WCS
-header-img: img/mat-reding-1079446-unsplash.jpg
+header-img: img/2018-10-01-Plug-inComponents.jpg
 catalog: true
 tags:
     - Notes

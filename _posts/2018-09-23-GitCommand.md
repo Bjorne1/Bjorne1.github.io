@@ -4,7 +4,7 @@ title:      Git Commands
 subtitle:   Commands used frequently in git
 date:       2018-09-23
 author:     WCS
-header-img: img/cameron-vaughan-1068039-unsplash.jpg
+header-img: img/2018-09-23-GitCommand.jpg
 catalog: true
 tags:
     - Git

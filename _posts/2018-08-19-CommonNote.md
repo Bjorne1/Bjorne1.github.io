@@ -4,7 +4,7 @@ title:      MOOC:Comment Notes
 subtitle:   Comment Notes
 date:       2018-08-19
 author:     WCS
-header-img: img/post-bg-swift2.jpg
+header-img: img/2018-08-19-CommonNote.jpg
 catalog: true
 tags:
     - JAVA

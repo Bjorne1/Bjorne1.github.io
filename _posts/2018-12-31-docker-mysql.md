@@ -4,7 +4,7 @@ title:      docker-mysql
 subtitle:   Communications link failure 
 date:       2018-12-31
 author:     WCS
-header-img: img/mat-reding-1079446-unsplash.jpg
+header-img: img/2018-12-31-docker-mysql.jpg
 catalog: true
 tags:
     - mysql
