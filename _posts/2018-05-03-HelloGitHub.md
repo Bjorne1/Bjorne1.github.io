@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Hello GitHub,Hello World!
+title:      Hello GitHub,　Hello World!
 subtitle:   This is My First Blog
 date:       2018-05-03
 author:     WCS
