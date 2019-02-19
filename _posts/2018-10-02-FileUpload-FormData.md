@@ -4,7 +4,7 @@ title:      FileUpload-FormData
 subtitle:   My Personal Plug-in Components 
 date:       2018-10-01
 author:     WCS
-header-img: img/2018-10-02-FileUpload-FormData.jpg
+header-img: img/2018-10-02-FileUpload.jpg
 catalog: true
 tags:
     - JAVA
