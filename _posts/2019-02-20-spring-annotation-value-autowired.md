@@ -256,7 +256,7 @@ public class Red implements ApplicationContextAware, BeanNameAware, EmbeddedValu
 }
 ```
 
-## 三、设置不同的环境下的Profile
+## 三、不同的环境下的Profile
 
 * **@Profile**注解是Spring为我们提供的可以根据当前环境，动态的激活和切换一系列组件的功能；
 * **@Profile**指定组件在哪个环境的情况下才能被注册到容器中，不指定，任何环境下都能注册这个组件；
