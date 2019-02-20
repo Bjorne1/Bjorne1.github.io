@@ -226,7 +226,7 @@ public class Boss {
 * 放在参数位置。
 > 以上感觉除了@Autowired用的多，@Primary配置多数据源的时候会用到，其他的到目前为止，我都没怎么用啊。
 
-#### 5、Aware
+#### 5、Aware自定义组件
 * 自定义组件想要使用Spring容器底层的一些组件（ApplicationContext，BeanFactory，xxx）；
 * 自定义组件实现xxxAware；在创建对象的时候，会调用接口规定的方法注入相关组件；
 * 把Spring底层一些组件注入到自定义的Bean中；
