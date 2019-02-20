@@ -195,7 +195,7 @@ protected Object initializeBean(...){
 
 * 经过一步步debug，将整理出一张简易的流程图，然后到最后才发现debug的是ApplicationContextAwareProcessor的底层。。但不影响，跟MyBeanPostProcessor都是差不多的。  
 
-![lifeCycle](/img/BeanLifeCycle.png)  
+![lifeCycle](/img/2019-02-19-bean-life-cycle.png)  
 
 > Spring底层对 BeanPostProcessor 的使用:  
 > bean赋值，注入其他组件，@Autowired，生命周期注解功能，@Async,xxx BeanPostProcessor
