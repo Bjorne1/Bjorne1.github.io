@@ -163,9 +163,10 @@ div异常。。。异常信息：{java.lang.ArithmeticException: / by zero}
 
 ## 四、AOP流程
 
-#### 1.传入配置类，创建ioc容器
-#### 2.注册配置类，调用refresh（）刷新容器；
-#### 3.registerBeanPostProcessors(beanFactory);注册bean的后置处理器来方便拦截bean的创建；
+#### 1、传入配置类，创建ioc容器
+#### 2、注册配置类，调用refresh（）刷新容器；
+#### 3、注册bean的后置处理器来方便拦截bean的创建；
+   * registerBeanPostProcessors(beanFactory);
    * (1).先获取ioc容器已经定义了的需要创建对象的所有BeanPostProcessor
    * (2).给容器中加别的BeanPostProcessor
    * (3).优先注册实现了PriorityOrdered接口的BeanPostProcessor；
@@ -184,8 +185,10 @@ div异常。。。异常信息：{java.lang.ArithmeticException: / by zero}
   
  以上是创建和注册**AnnotationAwareAspectJAutoProxyCreator**的过程  
   
-#### 4.finishBeanFactoryInitialization(beanFactory);完成BeanFactory初始化工作；创建剩下的单实例bean;(**AnnotationAwareAspectJAutoProxyCreator** => InstantiationAwareBeanPostProcessor)
-   * 1.遍历获取容器中所有的Bean，依次创建对象getBean(beanName);getBean->doGetBean()->getSingleton()->
+#### 4、完成BeanFactory初始化工作；创建剩下的单实例bean;
+   * finishBeanFactoryInitialization(beanFactory);
+   * **AnnotationAwareAspectJAutoProxyCreator** => InstantiationAwareBeanPostProcessor
+   * 1.遍历获取容器中所有的Bean，依次创建对象getBean(beanName);getBean **->**doGetBean()**->**getSingleton()**->**
    * 2.创建bean
       * 【**AnnotationAwareAspectJAutoProxyCreator**在所有bean创建之前会有一个拦截，InstantiationAwareBeanPostProcessor，会调用postProcessBeforeInstantiation()】
       * (1).先从缓存中获取当前bean，如果能获取到，说明bean是之前被创建过的，直接使用，否则再创建；只要创建好的Bean都会被缓存起来
