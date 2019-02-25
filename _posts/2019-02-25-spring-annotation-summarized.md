@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Spring Annotation(四)
+title:      Spring Annotation(五)
 subtitle:   Srping Summarized
 date:       2019-02-25
 author:     WCS
@@ -33,8 +33,8 @@ tags:
 1、**创建**刷新BeanFactory  
 `refreshBeanFactory();`  
 
-(1)、创建了`this.beanFactory = new DefaultListableBeanFactory();  `
-(2)、给context容器设置唯一id;  
+* (1)、创建了`this.beanFactory = new DefaultListableBeanFactory();  `
+* (2)、给context容器设置唯一id;  
 
 2、返回刚才GenericApplicationContext创建的BeanFactory对象;`getBeanFactory();`  
 
@@ -138,16 +138,16 @@ protected void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactor
 >>>两个接口：BeanFactoryPostProcessor、BeanDefinitionRegistryPostProcessor  
 
 1、先执行BeanDefinitionRegistryPostProcessor  
-(1)、获取所有的BeanDefinitionRegistryPostProcessor  
-(2)、先执行实现了PriorityOrdered优先级接口的BeanDefinitionRegistryPostProcessor,postProcessor.postProcessBeanDefinitionRegistry(registry)  
-(3)、再执行实现了Ordered顺序接口的BeanDefinitionRegistryPostProcessor,postProcessor.postProcessBeanDefinitionRegistry(registry)  
-(4)、最后执行没有实现任何优先级或者是顺序接口的BeanDefinitionRegistryPostProcessor,postProcessor.postProcessBeanDefinitionRegistry(registry)  
+* (1)、获取所有的BeanDefinitionRegistryPostProcessor  
+* (2)、先执行实现了PriorityOrdered优先级接口的BeanDefinitionRegistryPostProcessor,postProcessor.postProcessBeanDefinitionRegistry(registry)  
+* (3)、再执行实现了Ordered顺序接口的BeanDefinitionRegistryPostProcessor,postProcessor.postProcessBeanDefinitionRegistry(registry)  
+* (4)、最后执行没有实现任何优先级或者是顺序接口的BeanDefinitionRegistryPostProcessor,postProcessor.postProcessBeanDefinitionRegistry(registry)  
 
 2、再执行BeanFactoryPostProcessor的方法  
-(1)、获取所有的BeanFactoryPostProcessor  
-(2)、先执行实现了PriorityOrdered优先级接口的BeanFactoryPostProcessor,postProcessor.postProcessBeanFactory()  
-(3)、再执行实现了Ordered顺序接口的BeanFactoryPostProcessor,postProcessor.postProcessBeanFactory()  
-(4)、最后执行没有实现任何优先级或者是顺序接口的BeanFactoryPostProcessor,postProcessor.postProcessBeanFactory()  
+* (1)、获取所有的BeanFactoryPostProcessor  
+* (2)、先执行实现了PriorityOrdered优先级接口的BeanFactoryPostProcessor,postProcessor.postProcessBeanFactory()  
+* (3)、再执行实现了Ordered顺序接口的BeanFactoryPostProcessor,postProcessor.postProcessBeanFactory()  
+* (4)、最后执行没有实现任何优先级或者是顺序接口的BeanFactoryPostProcessor,postProcessor.postProcessBeanFactory()  
 
 ## 七、注册BeanPostProcessor(Bean的后置处理器)
 >registerBeanPostProcessors(beanFactory);
@@ -173,9 +173,9 @@ protected void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactor
 1、获取BeanFactory  
 
 2、看容器中是否有id为messageSource的，类型是MessageSource的组件  
-(1)有，赋值给messageSource  
-(2)没有，自己创建一个DelegatingMessageSource  
-(3)MessageSource：取出国际化配置文件中的某个key的值，能按照区域信息获取  
+* (1)有，赋值给messageSource  
+* (2)没有，自己创建一个DelegatingMessageSource  
+* (3)MessageSource：取出国际化配置文件中的某个key的值，能按照区域信息获取  
 
 3、把创建好的MessageSource注册在容器中，以后获取国际化配置文件的值的时候，可以自动注入MessageSource  
 ```
