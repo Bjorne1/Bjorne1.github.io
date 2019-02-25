@@ -244,51 +244,51 @@ if (earlyEventsToProcess != null) {
 
 ②不是工厂Bean。利用getBean(beanName);创建对象  
 
-A、getBean(beanName)； ioc.getBean();  
-B、doGetBean(name, null, null, false);  
-C、先获取缓存中保存的单实例Bean。如果能获取到说明这个Bean之前被创建过（所有创建过的单实例Bean都会被缓存起来），从`private final Map<String, Object> singletonObjects = new ConcurrentHashMap<String, Object>(256);`获取的  
-D、缓存中获取不到，开始Bean的创建对象流程`doGetBean()`  
-E、标记当前bean已经被创建`if (!typeCheckOnly) {markBeanAsCreated(beanName);}`  
-F、获取Bean的定义信息  
-G、**获取当前Bean依赖的其他Bean;如果有按照getBean()把依赖的Bean先创建出来**  
+* A、getBean(beanName)； ioc.getBean();  
+* B、doGetBean(name, null, null, false);  
+* C、先获取缓存中保存的单实例Bean。如果能获取到说明这个Bean之前被创建过（所有创建过的单实例Bean都会被缓存起来），从`private final Map<String, Object> singletonObjects = new ConcurrentHashMap<String, Object>(256);`获取的  
+* D、缓存中获取不到，开始Bean的创建对象流程`doGetBean()`  
+* E、标记当前bean已经被创建`if (!typeCheckOnly) {markBeanAsCreated(beanName);}`  
+* F、获取Bean的定义信息  
+* G、**获取当前Bean依赖的其他Bean;如果有按照getBean()把依赖的Bean先创建出来**  
 `String[] dependsOn = mbd.getDependsOn();`  
 
-H、启动单实例Bean的创建流程  
+* H、启动单实例Bean的创建流程  
 
-a、createBean(beanName, mbd, args);  
-b、Object bean = resolveBeforeInstantiation(beanName, mbdToUse);让BeanPostProcessor先拦截返回代理对象；**InstantiationAwareBeanPostProcessor**：提前执行  
+   * a、createBean(beanName, mbd, args);  
+   * b、Object bean = resolveBeforeInstantiation(beanName, mbdToUse);让BeanPostProcessor先拦截返回代理对象；**InstantiationAwareBeanPostProcessor**：提前执行  
 先触发：postProcessBeforeInstantiation();  
 如果有返回值：触发postProcessAfterInitialization();  
-c、如果前面的InstantiationAwareBeanPostProcessor没有返回代理对象；调用d
-d、`Object beanInstance = doCreateBean(beanName, mbdToUse, args);`创建Bean  
+   * c、如果前面的InstantiationAwareBeanPostProcessor没有返回代理对象；调用d
+   * d、`Object beanInstance = doCreateBean(beanName, mbdToUse, args);`创建Bean  
 
-(A)、**创建Bean实例**`createBeanInstance(beanName, mbd, args);`  
+      * (A)、**创建Bean实例**`createBeanInstance(beanName, mbd, args);`  
 利用工厂方法或者对象的构造器创建出Bean实例。
-(B)、`applyMergedBeanDefinitionPostProcessors(mbd, beanType, beanName);`  
+      * (B)、`applyMergedBeanDefinitionPostProcessors(mbd, beanType, beanName);`  
 调用MergedBeanDefinitionPostProcessor的`postProcessMergedBeanDefinition(mbd, beanType, beanName);`  
 
-(C)、**Bean属性赋值**`populateBean(beanName, mbd, instanceWrapper);`  
+      * (C)、**Bean属性赋值**`populateBean(beanName, mbd, instanceWrapper);`  
 
-(a)赋值之前：  
+         * (a)赋值之前：  
 拿到InstantiationAwareBeanPostProcessor后置处理器`postProcessAfterInstantiation();`  
 拿到InstantiationAwareBeanPostProcessor后置处理器`postProcessPropertyValues();`  
-(b)应用Bean属性的值；为属性利用setter方法等进行赋值  
+         * (b)应用Bean属性的值；为属性利用setter方法等进行赋值  
 `applyPropertyValues(beanName, mbd, bw, pvs);`  
 
-(D)、**Bean初始化**`initializeBean(beanName, exposedObject, mbd);`  
+      * (D)、**Bean初始化**`initializeBean(beanName, exposedObject, mbd);`  
 
-(a)、**执行Aware接口方法**`invokeAwareMethods(beanName, bean)`;执行xxxAware接口的方法  
+         * (a)、**执行Aware接口方法**`invokeAwareMethods(beanName, bean)`;执行xxxAware接口的方法  
 `BeanNameAware\BeanClassLoaderAware\BeanFactoryAware`  
-(b)、**执行后置处理器初始化之前**`applyBeanPostProcessorsBeforeInitialization(wrappedBean, beanName);`  
+         * (b)、**执行后置处理器初始化之前**`applyBeanPostProcessorsBeforeInitialization(wrappedBean, beanName);`  
 `BeanPostProcessor.postProcessBeforeInitialization();`  
-(c)、**执行初始化方法**`invokeInitMethods(beanName, wrappedBean, mbd);`  
+         * (c)、**执行初始化方法**`invokeInitMethods(beanName, wrappedBean, mbd);`  
 是否是InitializingBean接口的实现；执行接口规定的初始化；是否自定义初始化方法；  
-(d)、**执行后置处理器初始化之后**`applyBeanPostProcessorsAfterInitialization`  
+         * (d)、**执行后置处理器初始化之后**`applyBeanPostProcessorsAfterInitialization`  
 `BeanPostProcessor.postProcessAfterInitialization();`  
 
-(E)、注册Bean的销毁方法
+      * (E)、注册Bean的销毁方法
 
-e、将创建的Bean添加到缓存中singletonObjects  
+   *e、将创建的Bean添加到缓存中singletonObjects  
 
 (4)、所有Bean都利用getBean创建完成以后，检查所有的Bean是否是SmartInitializingSingleton接口的，如果是，就执行afterSingletonsInstantiated()  
 
