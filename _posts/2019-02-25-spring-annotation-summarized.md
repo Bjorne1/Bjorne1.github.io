@@ -27,8 +27,8 @@ tags:
 3、保存容器中的一些早期的事件;  
 `earlyApplicationEvents= new LinkedHashSet<ApplicationEvent>();`
 
-## 三、获取子类刷新的BeanFactory
->obtainFreshBeanFactory();  
+## 三、告诉子类刷新其内部的bean factory
+>obtainFreshBeanFactory();  // Tell the subclass to refresh the internal bean factory.
 
 1、**创建**刷新BeanFactory  
 `refreshBeanFactory();`  
