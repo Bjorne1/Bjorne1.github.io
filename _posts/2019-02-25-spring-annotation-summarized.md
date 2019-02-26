@@ -14,7 +14,7 @@ tags:
 # 前言
 这是一篇Spirng容器整个创建流程的总结文章。
 
-## 一、创建刷新
+## 一、容器刷新
 >new AnnotationConfigApplicationContext().refresh();
 
 ## 二、刷新前的预处理
@@ -121,7 +121,7 @@ if (!beanFactory.containsLocalBean(SYSTEM_ENVIRONMENT_BEAN_NAME)) {
 }
 ```  
 
-## 五、BeanFactory准备工作完成后进行的后置处理工作
+## 五、BeanFactory准备完成后进行的后置处理工作
 >postProcessBeanFactory(beanFactory);  
 
 ```
@@ -237,6 +237,7 @@ if (earlyEventsToProcess != null) {
 >beanFactory.preInstantiateSingletons();  
 
 (1)、获取容器中的所有Bean，依次进行初始化和创建对象  
+
 (2)、获取Bean的定义信息；RootBeanDefinition  
 
 (3)、Bean不是抽象的，是单实例的，不是懒加载  
@@ -288,7 +289,7 @@ if (earlyEventsToProcess != null) {
 
       * (E)、注册Bean的销毁方法
 
-   *e、将创建的Bean添加到缓存中singletonObjects  
+   * e、将创建的Bean添加到缓存中singletonObjects  
 
 (4)、所有Bean都利用getBean创建完成以后，检查所有的Bean是否是SmartInitializingSingleton接口的，如果是，就执行afterSingletonsInstantiated()  
 
@@ -317,7 +318,7 @@ void onClose();
 
 ## 十四、总结
 1、Spring容器在启动的时候，先会保存所有注册进来的Bean的定义信息  
-(1)、xml注册bean；<bean>  
+(1)、xml注册bean；<bean>   
 (2)、注解注册Bean；@Service、@Component、@Bean、xxx  
 
 2、Spring容器会合适的时机创建这些Bean  
