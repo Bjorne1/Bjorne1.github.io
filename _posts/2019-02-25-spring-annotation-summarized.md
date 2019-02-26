@@ -194,7 +194,7 @@ MessageSource.getMessage(String code, Object[] args, String defaultMessage, Loca
 
 4、将创建的ApplicationEventMulticaster添加到BeanFactory中，以后其他组件直接自动注入  
 
-## 十、留给子容器(子类)
+## 十、在子容器中初始化其他特殊的bean
 >onRefresh();// Initialize other special beans in specific context subclasses.
 >>子类重写这个方法，在容器刷新的时候可以自定义逻辑  
 
