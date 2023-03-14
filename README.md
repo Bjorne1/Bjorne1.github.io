@@ -1,16 +1,10 @@
-# [懒人找资源-手册](/README.md)
+# [wcs-手册](/README.md)
 
 > **知识不应该是—部分人的特权，应该自由顺畅流向每一个需要它的人**
 
 ## 介绍
-
-<details>
-  <summary>防失联请关注公众号：懒人找资源</summary>
- <p> <img src="https://mmbiz.qpic.cn/mmbiz_jpg/Rmd3GnW8BRvQ4lyFfHJRKdCT38dOFpVQaIyoeXpYOxYsboIlPS7sKSPA4ibNAXCteYOP3KW5Pz4RPaxYOBsibfNg/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1" alt="" width="863" data-width="863" data-height="670"></p>
-</details>
-
-
-电脑浏览器访问体验更佳！**左上角支持搜索关键词~**
+wcs资源库
+TODO wcs导航
 
 <i class="fa fa-weixin"></i> [手册使用介绍点这里查看](https://mp.weixin.qq.com/s/WSCQHkw25bb9Vv_3Lu_Mzw)
 
@@ -20,37 +14,29 @@
 
 ## 分类栏目
 
-（推广）[请点击【莆田耐克代工鞋厂】顺丰得物发货空军￥65椰子￥75万款货源【点击进入】专柜1.1](https://docs.qq.com/doc/DZEpHYmFYdVJSeVR0)
+### [1.JAVA](data/01_JAVA.md)
 
-### [0.更新记录](data/00_更新记录.md)   
+### [2.实用网站](data/02_实用网站.md)
 
-### [1.实用网站](data/01_实用网站.md)
+### [3.BT磁力相关](data/03_BT磁力相关.md)
 
-### [2.BT磁力相关](data/02_BT磁力相关.md)
+### [4.学习资源](data/04_学习资源.md)
 
-### [3.学习资源](data/03_学习资源.md)
+### [5_影视资源](data/05_影视资源.md)
 
-### [4_影视资源](data/04_影视资源.md)
+### [6.常用资源](data/06_常用资源.md)
 
-### [7.常用资源](data/07_常用资源.md)
+### [7.手机常用](data/07_手机常用.md)
 
-### [8.手机常用](data/08_手机常用.md)
+### [8.电脑常用](data/08_电脑常用.md)
 
-### [9.电脑常用](data/09_电脑常用.md)
+### [9.图片相关](data/09_图片相关.md)
 
-### [10.图片相关](data/10_图片相关.md)
-
-### [11.软件备份](data/11_软件备份.md)
-
-### [12.开源项目](https://lazyso.netlify.app/#/source/12.%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE)
-
-### [15.各类资源](/data/15.各类资源.md)
-
-### [16.懒人上传分享](/data/16.懒人上传整理.md)
+### [10.开源项目](https://lazyso.netlify.app/#/source/12.%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE)
 
 ## 懒人专栏
 
-| [懒人碎碎念](/article/collection)           | [破姐软件分享](/article/software)     |
+| [懒人碎碎念](/article/collection)           | [破解软件分享](/article/software)     |
 | ------------------------------------------- | ------------------------------------- |
 | [专属群文档备份](/blog/record3)             | [专属群更新记录](/blog/record2)       |
 | [懒人早报](/blog/morning)                   | [专属群通才计划](data/13.通才计划.md) |
